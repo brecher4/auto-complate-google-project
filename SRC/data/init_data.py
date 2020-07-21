@@ -6,6 +6,10 @@ data_for_search = {}
 
 
 
+def get_sentences_data():
+    return sentences_data
+
+
 def remove_space_of_begin(sentence):
     while(sentence and sentence[0] == ' '): 
         sentence = sentence[1:]
