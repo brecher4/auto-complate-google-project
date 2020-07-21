@@ -1,18 +1,59 @@
-page = {}
+# page = {}
 
-input = "hello big"
+# input = "hello big"
 
-sentences_sort = [{sentence: page}]
+# sentences_sort = [{sentence: page}]
 
-data{key: place}
+# data{key: place}
 
-place = {"bagin":index,"end" : index}
+# place = {"bagin":index,"end" : index}
 
-#algoritm
+# #algoritm
 
-place = data[input]
+# place = data[input]
 
-return 
+# return 
+
+
+# sentence1 = "Hello"
+# sentence2 = "Hi"
+
+# sorce = {1: "completion.py"}
+
+# sentences_sort = [{"sentence": "Hello", "src": 1}, {"sentence": "Hi", "src": 1}]
+
+# data = {
+#     "H": {
+#         "begin": 0,
+#         "end": 2
+#     },
+
+#     "He": {
+#         "begin": 0,
+#         "end": 1
+#     }, 
+
+#     "Hel": {
+#         "begin": 0,
+#         "end": 1
+#     }, 
+
+#     "Hell": {
+#         "begin": 0,
+#         "end": 1
+#     }, 
+
+#     "Hello": {
+#         "begin": 0,
+#         "end": 1
+#     }, 
+
+#     "Hi": {
+#         "begin": 1,
+#         "end": 2
+#     }
+# }
+
 
 
 
