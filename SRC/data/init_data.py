@@ -2,7 +2,7 @@ sorce_files = {1: "data/contents.txt"}
 
 sentences_data = []
 
-data = {}
+data_for_search = {}
 
 
 
@@ -37,19 +37,23 @@ def get_sub_sentences(sentence):
     return [sentence[0:i] for i in range(1, len(sentence) + 1)]
 
 
-def init_data():
+def init_data_for_search():
     for index, item in enumerate(sentences_data):
         sub_sentences = get_sub_sentences(item["sentence"])
     
         for sub in sub_sentences:
-            if sub in data:
-                data[sub]["end"] += 1
+            if sub in data_for_search:
+                data_for_search[sub]["end"] += 1
             else:
-                data[sub] = {"begin": index, "end": index + 1}
+                data_for_search[sub] = {"begin": index, "end": index + 1}
 
 
-if __name__ == "__main__":
+def init_meta_data():
     read_from_files()
-    init_data()
-    print(f'{sentences_data} \n')
-    print(f'{data} \n')
+    init_data_for_search()
+
+
+# if __name__ == "__main__":
+#     init_meta_data()
+#     print(f'{sentences_data} \n')
+#     print(f'{data_for_search} \n')
