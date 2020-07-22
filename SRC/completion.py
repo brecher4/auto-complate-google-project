@@ -32,7 +32,7 @@ def get_best_k_completions(input):
         autoCompleteData_list += [AutoCompleteData(item)]
     
     for i in range(len(autoCompleteData_list)):
-        print(f'{i + 1}. {autoCompleteData_list[i].completed_sentence}, ({get_source_file()[autoCompleteData_list[i].source_text]}) \n')
+        print(f'{i + 1}. {autoCompleteData_list[i].completed_sentence}, ({get_source_file()[autoCompleteData_list[i].source_text[0]]} {autoCompleteData_list[i].source_text[1]}) \n')
 
 
 # if __name__ == "__main__":
