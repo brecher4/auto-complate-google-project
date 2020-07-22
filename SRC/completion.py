@@ -21,7 +21,6 @@ def get_list_completions(input):
     if len(suitable_completions) < 5:
         suitable_completions += get_completions_with_correction(input, 5 - len(suitable_completions))
 
-
     return suitable_completions
 
 
