@@ -1,4 +1,4 @@
-sorce_files = {1: "data/contents.txt"}
+source_files = {1: "data/contents.txt"}
 
 sentences_data = []
 
@@ -25,7 +25,7 @@ def get_dict_of_sentences(sentence, id_src):
 def read_from_files():
     sentences_data_no_sorted = []
     
-    for id, name in sorce_files.items():
+    for id, name in source_files.items():
 
         with open(name) as file:
             sentences = file.read().split("\n")
@@ -35,6 +35,7 @@ def read_from_files():
 
             if(dict_sentence["sentence"] != "" and dict_sentence not in sentences_data_no_sorted):
                 sentences_data_no_sorted += [dict_sentence]
+
 
     global sentences_data
     sentences_data = sorted(sentences_data_no_sorted, key=lambda k: k["sentence"])
