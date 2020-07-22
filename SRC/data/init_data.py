@@ -13,6 +13,10 @@ def get_sentences_data():
     return sentences_data
 
 
+def get_source_file():
+    return source_files
+
+
 def remove_space_of_begin(sentence):
     while(sentence and sentence[0] == ' '): 
         sentence = sentence[1:]
@@ -64,10 +68,10 @@ def init_meta_data():
     init_data_for_search()
 
 
-if __name__ == "__main__":
-    init_meta_data()
-    # print(f'{sentences_data} \n')
-    print(f'{data_for_search["C server"]} \n')
+# if __name__ == "__main__":
+#     init_meta_data()
+#     print(f'{sentences_data} \n')
+#     print(f'{data_for_search["C server"]} \n')
 
-    for i in data_for_search["C server"]:
-        print(f'{sentences_data[i]} \n')
+#     for i in data_for_search["C server"]:
+#         print(f'{sentences_data[i]} \n')
