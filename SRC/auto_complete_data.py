@@ -5,5 +5,3 @@ class AutoCompleteData:
         self.source_text = data["src"]
         self.offset = data["offset"]
         self.score = data["score"]
-
-
