@@ -1,5 +1,6 @@
 from completion import get_list_completions
 
+
 def start_application():
     print("The system is ready:")
 
