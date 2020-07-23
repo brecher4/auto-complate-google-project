@@ -15,15 +15,25 @@ def get_suitable_sentences_without_duplicates(i_letter, corrction_str, match_ind
         if sentence_dict in l:
             continue
 
-        sentence_dict["score"] = len(list_sentences_data[j]["sentence"]) * 2
-
         if "replacement" == type_change:
+            sentence_dict["score"] = len(corrction_str) * 2
+
             if(i_letter < 4):
                 sentence_dict["score"] -=  5 - i_letter
             else:
                 sentence_dict["score"] -= 1
 
-        if "deleting" == type_change or "adding" == type_change:
+        if "deleting" == type_change:
+            sentence_dict["score"] = len(corrction_str) * 2 - 1
+
+            if(i_letter < 4):
+                sentence_dict["score"] -=  10 - 2 * i_letter
+            else:
+                sentence_dict["score"] -= 2
+
+        if "adding" == type_change:
+            sentence_dict["score"] = len(corrction_str) * 2 + 1
+
             if(i_letter < 4):
                 sentence_dict["score"] -=  10 - 2 * i_letter
             else:

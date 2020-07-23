@@ -13,7 +13,7 @@ def get_list_completions(input):
 
         for i in match_indexes:
             sentence_dict = list_sentences_data[i]
-            sentence_dict["score"] = len(list_sentences_data[i]["sentence"]) * 2
+            sentence_dict["score"] = len(input) * 2
             sentence_dict["offset"] = (sentence_dict["sentence"]).index(input)
             suitable_completions += [sentence_dict]
             
@@ -41,7 +41,8 @@ def get_best_k_completions(input):
         autoCompleteData_list += [AutoCompleteData(item)]
     
     for i in range(len(autoCompleteData_list)):
-        print(f'{i + 1}. {autoCompleteData_list[i].completed_sentence}, ({get_source_file()[autoCompleteData_list[i].source_text[0]]} {autoCompleteData_list[i].source_text[1]}) \n')
+        print(f'{i + 1}. {autoCompleteData_list[i].completed_sentence}, \n') 
+        print(f'({get_source_file()[autoCompleteData_list[i].source_text[0]]} {autoCompleteData_list[i].source_text[1]}, {autoCompleteData_list[i].offset}, {autoCompleteData_list[i].score}) \n')
 
 
 # if __name__ == "__main__":
