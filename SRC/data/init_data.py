@@ -16,7 +16,7 @@ def get_sentences_data():
     return sentences_data
 
 
-def get_source_file():
+def get_source_files():
     return source_files
 
 
@@ -62,7 +62,7 @@ def read_from_files():
 
 
 def get_sub_sentences(sentence):
-    return [sentence[i:j] for i in range(0, len(sentence) + 1) for j in range(i + 1, len(sentence) + 1)]
+    return [sentence[i:j] for i in range(0, len(sentence)) for j in range(i + 1, len(sentence) + 1)]
 
 
 def init_data_for_search():
