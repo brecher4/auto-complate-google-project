@@ -1,6 +1,6 @@
 from completion import get_list_completions
 from data.init_data import init_meta_data
-from tkinter import *
+from tkinter import Tk, Menu, END, Entry, Button, Listbox
 
 
 init_meta_data()
