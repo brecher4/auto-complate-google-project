@@ -39,7 +39,6 @@ def get_suitable_sentences_without_duplicates(i_letter, corrction_str, match_ind
             else:
                 sentence_dict["score"] -= 2
 
-        sentence_dict["offset"] = (sentence_dict["sentence"]).index(corrction_str)
         suitable_completions += [sentence_dict]
         num_miss_sentences -= 1
 
@@ -52,7 +51,7 @@ def character_replacement(substr, num_sentences):
 
     for i in range(0, len(substr))[::-1]:
 
-        for char in string.printable.replace(substr[i],''):
+        for char in 'abcdefghijklmnopqrstuvwxyz'.replace(substr[i],''):
             
             corrction_str = substr[:i] + char + substr[i + 1:] if i != len(substr) - 1 else substr[:i] + char
             match_indexes = data_for_search.get(corrction_str, None)
