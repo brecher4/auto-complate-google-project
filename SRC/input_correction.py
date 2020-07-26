@@ -74,7 +74,7 @@ def deleting_character(substr, num_sentences):
     
     for i in range(0, len(substr) - 1)[::-1]:
 
-        for char in string.printable:
+        for char in 'abcdefghijklmnopqrstuvwxyz':
             
             corrction_str = substr[:i + 1] + char + substr[i + 1:]
             match_indexes = data_for_search.get(corrction_str, None)
